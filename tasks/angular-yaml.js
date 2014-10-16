@@ -15,7 +15,7 @@ module.exports = function(grunt) {
     async.each(this.filesSrc, function(file, next) {
       try {
         var data = grunt.file.readYAML(file);
-        constants.push("constant('" + path.basename(file, path.extname(file)) + "', " + JSON.stringify(data) + ")");
+        constants.push("constant('" + path.basename(file, path.extname(file)).toUpperCase() + "', " + JSON.stringify(data) + ")");
         next();
       } catch(e) {
         next(e);
