@@ -1,0 +1,16 @@
+lib:
+  files:
+    - '<%= jshint.lib %>'
+  tasks:
+    - 'scripts'
+    - 'angular-yaml'
+example:
+  files:
+    - 'example/**/*'
+  tasks:
+    - 'angular-yaml'
+build:
+  files:
+    - 'Gruntfile.js'
+    - 'grunt/*.yaml'
+  tasks: 'default'
